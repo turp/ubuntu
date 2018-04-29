@@ -49,6 +49,33 @@ pub   4096R/0EBFCD88 2017-02-22
 uid                  Docker Release (CE deb) <docker@docker.com>
 sub   4096R/F273FCD8 2017-02-22
 ```
+Use the following command to set up the stable repository. 
+
+```
+sudo add-apt-repository \
+   "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+   artful stable"
+```
+
+Update the apt package index.
+
+```
+sudo apt-get update
+```
+
+Verify that everything in configured properly
+
+```
+$ apt-cache search docker-ce
+
+docker-ce - Docker: the open-source application container engine
+```
+
+Install the latest version of Docker CE, or go to the next step to install a specific version:
+
+```
+sudo apt-get install docker-ce
+```
 
 
 ## Erlang
