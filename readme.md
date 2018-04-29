@@ -87,9 +87,10 @@ If you don’t want to use sudo when you use the docker command, create a Unix g
 
 ```
 sudo groupadd docker
-sudo usermod -aG docker $USER
+sudo usermod -G docker -a $USER
 ```
-Log out and log back in so that your group membership is re-evaluated.
+
+Restart machine so that your group membership is re-evaluated.
 
 Verify that you can run docker commands without sudo.
 
