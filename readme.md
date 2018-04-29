@@ -77,6 +77,25 @@ Install the latest version of Docker CE, or go to the next step to install a spe
 sudo apt-get install docker-ce
 ```
 
+Verify that Docker CE is installed correctly by running the hello-world image.
+
+```
+sudo docker run hello-world
+```
+
+If you don’t want to use sudo when you use the docker command, create a Unix group called docker and add users to it. When the docker daemon starts, it makes the ownership of the Unix socket read/writable by the docker group.
+
+```
+sudo groupadd docker
+sudo usermod -aG docker $USER
+```
+Log out and log back in so that your group membership is re-evaluated.
+
+Verify that you can run docker commands without sudo.
+
+```
+docker run hello-world
+```
 
 ## Erlang
 
